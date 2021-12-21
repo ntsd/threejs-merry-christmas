@@ -35,10 +35,11 @@ orbitControls.addEventListener('change', (change) => {
     else orbitControls.maxPolarAngle = 1.98
 }, false);
 orbitControls.maxDistance = 500
-orbitControls.maxPolarAngle = 1.98;
-orbitControls.autoRotate = false;
-orbitControls.enableDamping = true;
-orbitControls.dampingFactor = 0.2;
+orbitControls.maxPolarAngle = 1.98
+orbitControls.autoRotate = false
+orbitControls.enablePan = false
+orbitControls.enableDamping = true
+orbitControls.dampingFactor = 0.2
 
 // AmbientLight
 const ambientLight = new THREE.AmbientLight(0x666666);
