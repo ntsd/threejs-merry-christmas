@@ -67,7 +67,7 @@ scene.add(planeMesh);
 
 // Christmas Tree
 const loader = new GLTFLoader();
-loader.load('/assets/models/christmas_tree/scene.gltf', function (gltf) {
+loader.load('assets/models/christmas_tree/scene.gltf', function (gltf) {
     const tree = gltf.scene
 
     tree.scale.set(10, 10, 10)
