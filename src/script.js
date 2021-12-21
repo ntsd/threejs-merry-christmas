@@ -1,7 +1,7 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 const sizes = {
     width: window.innerWidth,
@@ -67,7 +67,8 @@ scene.add(planeMesh);
 
 // Christmas Tree
 const loader = new GLTFLoader();
-loader.load('assets/models/christmas_tree/scene.gltf', function (gltf) {
+
+loader.load('assets/models/christmas_tree/scene.gltf', (gltf) => {
     const tree = gltf.scene
 
     tree.scale.set(10, 10, 10)
@@ -75,7 +76,9 @@ loader.load('assets/models/christmas_tree/scene.gltf', function (gltf) {
     tree.castShadow = true;
 
     scene.add(tree);
-}, undefined, function (error) {
+}, () => {
+    // TODO progress
+}, function (error) {
     console.error(error);
 });
 
