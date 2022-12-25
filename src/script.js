@@ -66,15 +66,13 @@ planeMesh.position.y = 0;
 planeMesh.position.z = 0;
 scene.add(planeMesh);
 
-// Christmas Tree
+// Snowman
 const loader = new GLTFLoader();
 
-loader.load('assets/models/christmas_tree/scene.gltf', (gltf) => {
+loader.load('assets/models/snowman/scene.gltf', (gltf) => {
     const tree = gltf.scene
 
-    tree.scale.set(10, 10, 10)
-    tree.position.set(0, -50, 0)
-    tree.castShadow = true;
+    tree.position.set(0, -50, 0);
 
     scene.add(tree);
 }, () => {
